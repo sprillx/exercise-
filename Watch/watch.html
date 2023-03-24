@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant&family=Dancing+Script:wght@500&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="watch.css">
+    </head>
+    <body onload="clock()">
+
+        <h1> Current Date Below </h1>
+
+
+        <div id="outerlayer">
+            <p> </p>
+        </div>
+
+
+    <script>    
+         function clock(){
+        let CurrentTime = new Date()
+        let hour = CurrentTime.getHours()
+        let minute = CurrentTime.getMinutes()
+        let second = CurrentTime.getSeconds()
+        
+        const getTime = hour+" "+" "+minute+" "+second
+        document.getElementById("outerlayer").innerHTML = getTime
+
+            setTimeout( clock, 1000)
+                
+            }
+          
+    </script>
+    </body>
+</html>
