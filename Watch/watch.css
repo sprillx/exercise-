@@ -7,14 +7,21 @@ body{
 h1{
     text-align:center;
 }
-#outerlayer{
+.outer{
     background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-    color: rgb(0, 0, 0);
+    color: rgb(10, 9, 9);
     border-color: #92FE9D;
     font-size: 75px;
     border: 2px solid black;
     width: max-content;
     padding: 32px;
     margin: auto;
+}
 
+#outerlayer{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    margin: auto;
+    display: block;
+    justify-content: center;
 }
