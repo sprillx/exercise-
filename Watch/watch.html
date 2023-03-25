@@ -11,9 +11,10 @@
 
         <h1> Current Date Below </h1>
 
-
-        <div id="outerlayer">
-            <p> </p>
+    
+        <div class="outer">
+            <div id="outerlayer"> </div>
+            <div id="inner"> </div>
         </div>
 
 
@@ -23,14 +24,38 @@
         let hour = CurrentTime.getHours()
         let minute = CurrentTime.getMinutes()
         let second = CurrentTime.getSeconds()
+
+
+    const Weekdays = ['Sunday', 'Monday', 'Tuesday', 'Weds', 'Thursday', 'Friday', 'Saturday'];
+    const Months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        let d = new Date();
+        let day = d.getDate();
+        let month = Months[d.getMonth()]
+        let year = d.getFullYear();
+        let name = Weekdays[d.getDay()]
+
+       
+
+
+
+        
+
+
+       
         
         const getTime = hour+" "+" "+minute+" "+second
+        const showCase = name  +", "+month+" "+day+" "+year;
         document.getElementById("outerlayer").innerHTML = getTime
+        document.getElementById("inner").innerHTML = showCase
+       
 
             setTimeout( clock, 1000)
+            
                 
             }
-          
+           
+            
+     
     </script>
     </body>
 </html>
